@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App/App.js';
+import {ResetStyle, GlobalStyle} from './components/globalStyle';
+
+const boardBackground = {
+  background: 'rgba(0.2, 0.2, 0.2, 0.2)',
+  height: '1080px'
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div className={App} style={boardBackground}>
+    <ResetStyle />
+    <GlobalStyle />
     <App />
-  </React.StrictMode>,
+  </div>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
